@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --fs-heading: clamp(2rem, 0.5rem + 3vw, 2rem);
+    --fs-heading-medium: clamp(3rem, 0.5rem + 3vw, 3rem);
+    --fs-heading-small: clamp(1.5rem, 0.5rem + 3vw, 1.5rem);
+    --fs-heading-mediummob: clamp(2rem, 0.5rem + 3vw, 2rem);
+}
+
+body {
+    background-color: #F0DADC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #9B7475;
+}
+
+.imgtopo {
+    width: 40rem;
+    height: 40rem;
+    animation: topdown;
+    animation-duration: 700ms;
+}
+
+h1 {
+    font-size: var(--fs-heading-medium);
+    margin: 5rem 5rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    animation: downtop;
+    animation-duration: 700ms;
+}
+
+.contatos .contatosbox {
+    border: 0;
+    border-radius: 16px;
+    width: 50rem;
+    background-color: #9B7475;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;   
+    animation: downtop;
+    animation-duration: 700ms;
+}
+
+.contatos .contatosbox:hover {
+    transform: scale(1.1);
+}
+
+.contatos img {
+    width: 5rem;
+    height: 5rem;
+}
+
+a {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    text-decoration: none;
+    font-size: var(--fs-heading);
+    text-transform: uppercase;
+    color: white;
+    margin: auto;
+}
+
+@media (max-width: 600px){
+
+    .contatos .contatosbox {
+        width: 40rem;
+    }
+
+    a {
+        font-size:var(--fs-heading-small) ;
+    }
+
+    h1 {
+        font-size: var(--fs-heading-mediummob);
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .contatos .contatosbox {
+        width: 35rem;
+    }
+}
+
+@keyframes topdown {
+    0%{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform:translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
